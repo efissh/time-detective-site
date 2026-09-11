@@ -49,10 +49,15 @@
             <li>Transcript</li>
             <li>Translation</li>
             <li>Tap words in context</li>
-            <li>Exact word / sentence playback</li>
+            <li>Exact word playback</li>
+            <li>Exact sentence playback</li>
             <li>Vocabulary</li>
             <li>Review</li>
             <li>Sentence Shadowing</li>
+            <li>Settings / About</li>
+            <li>Interface Language</li>
+            <li>Manual Rename</li>
+            <li>Optional Smart Title when Apple Intelligence is available</li>
           </ul>
 
           <h2>Interface languages</h2>
@@ -69,51 +74,57 @@
             <li>Simplified Chinese</li>
           </ul>
           <div class="note-box">
-            <p>The interface language is independent from the learning/source language and the translation target language. You can change the buttons and labels without changing the language of the material you are studying.</p>
+            <p>Interface Language is independent from the speech/source language, translation target, stored Session language, saved Vocabulary, and vocabulary or Review history. Changing the interface changes buttons and labels; it does not rewrite your learning material or records.</p>
           </div>
 
-          <h2>Frequently asked questions</h2>
+          <h2>Troubleshooting</h2>
           <div class="faq-list">
             <details>
               <summary>Why does DeskLens Learn ask for microphone access?</summary>
               <div class="faq-answer">
-                <p>Microphone access is used when you start Live Listening and when you record yourself for Sentence Shadowing or another recording-related learning flow. The app does not silently record in the background. You can decline microphone access and still import audio or video.</p>
+                <p>Microphone access is needed when you start Live Listening and when you record yourself for Sentence Shadowing or another recording-related learning flow. If access was denied, re-enable it in the app’s iOS Settings. You can still import audio or video without microphone permission.</p>
               </div>
             </details>
             <details>
-              <summary>Why is my Speech recognition language unavailable?</summary>
+              <summary>Why is my Speech language unavailable?</summary>
               <div class="faq-answer">
-                <p>Speech recognition language availability is controlled by iOS and the device. Check that the selected source language matches the material, that your device supports it, and that the required Apple Speech resources are installed. The first use of a language may need an internet connection for iOS to download a resource.</p>
+                <p>Confirm that the selected source language matches the material and that your device supports it. Apple Speech language availability and resources are managed by iOS; allow the required resource to prepare or download, then retry.</p>
               </div>
             </details>
             <details>
               <summary>Why does Translation need a language or model download?</summary>
               <div class="faq-answer">
-                <p>Apple Translation resources may need to be downloaded the first time you use a language pair. Connect to the internet, keep the app open while iOS prepares the resource, then retry the translation. Apple manages this download; it is separate from a DeskLens Learn backend.</p>
+                <p>Confirm that the language pair is supported. If Apple requests a resource download, connect to the internet and allow system preparation to finish before retrying. Apple manages this resource; it is not a DeskLens Learn backend.</p>
               </div>
             </details>
             <details>
               <summary>Why did my audio or video fail to import?</summary>
               <div class="faq-answer">
-                <p>Choose a local file that iOS can open, such as a common m4a, wav, mp3, mov, mp4, or m4v file. Check that the file is available offline, is not protected by a format the system cannot decode, and that the device has enough storage. DeskLens Learn copies a successful import into its own local storage.</p>
+                <p>Choose a local file that iOS can read, such as a common m4a, wav, mp3, mov, mp4, or m4v file. Check that the file is available, not protected by an unsupported format or access restriction, and that the device has enough storage. A successful import is copied into DeskLens Learn’s local storage.</p>
               </div>
             </details>
             <details>
-              <summary>Why can’t I hear playback?</summary>
+              <summary>Why can’t I hear exact word or sentence playback?</summary>
               <div class="faq-answer">
-                <p>Check the device volume and current audio route, then try the exact word or sentence again. Confirm that the imported media contains an audible speech segment. If playback still fails, close and reopen the learning session and contact support with the file type and the step that failed.</p>
+                <p>Check the device volume and current audio route, then try the exact word or sentence again. Confirm that the source contains an audible speech segment. If playback still fails, close and reopen the session and contact support with the file type and the step that failed.</p>
               </div>
             </details>
             <details>
-              <summary>How do I change the iOS app interface language?</summary>
+              <summary>How do I change the Interface Language?</summary>
               <div class="faq-answer">
-                <p>Open <strong>Settings → Apps → DeskLens Learn → Language</strong> if your iOS version shows an app-specific language setting. Otherwise, open <strong>Settings → General → Language &amp; Region</strong> and adjust your preferred languages. This changes the interface, not the learning/source or translation target language.</p>
+                <p>Open <strong>Settings → Apps → DeskLens Learn → Language</strong> if your iOS version shows an app-specific language setting. Otherwise, use <strong>Settings → General → Language &amp; Region</strong> and adjust your preferred languages. This changes interface labels only, not the source language, translation target, sessions, Vocabulary, or Review history.</p>
               </div>
             </details>
             <details>
-              <summary>How do I restart or retry Apple Speech or Translation resources?</summary>
+              <summary>Why is Smart Title unavailable?</summary>
               <div class="faq-answer">
-                <p>First confirm the selected language and your network connection, then close and reopen the learning flow and retry. If iOS is still preparing a language resource, wait for that process to finish; restarting the device can also refresh a stalled system resource. Contact support if the same supported language continues to fail.</p>
+                <p>Smart Title is optional and depends on Apple Intelligence/Foundation Models availability, the device and operating system, Apple Intelligence settings, and model readiness. An unavailable suggestion does not block the session or renaming.</p>
+              </div>
+            </details>
+            <details>
+              <summary>How do I rename a session without Smart Title?</summary>
+              <div class="faq-answer">
+                <p>Use Manual Rename, enter your own title, and save it. The manual title is stored locally and remains the supported fallback whenever Smart Title is unavailable.</p>
               </div>
             </details>
             <details>
