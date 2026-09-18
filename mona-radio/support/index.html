@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Support for Mona Radio by Mona Apps.">
+  <meta name="theme-color" content="#f4f0e7">
+  <title>Mona Radio Support — Mona Apps</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="site-shell header-inner">
+      <a class="brand" href="../" aria-label="Mona Radio home">
+        <span class="brand-mark" aria-hidden="true">MR</span>
+        <span class="brand-text">Mona Radio<small>by Mona Apps</small></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="./" aria-current="page">Support</a>
+        <a class="nav-cta" href="../privacy/">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="site-shell">
+        <p class="eyebrow">Mona Radio support</p>
+        <h1>Your radio. Everywhere in Apple.</h1>
+        <p>Mona Radio connects to your <span style="white-space: nowrap">Icom IC-705</span> over your local network. Here is how to get connected, and what to try when something doesn’t work.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="site-shell support-grid">
+        <aside class="contact-card">
+          <h2>Talk to us</h2>
+          <p>Email the support team with a short description of what happened.</p>
+          <a class="email-link" href="mailto:monaapps.support@gmail.com?subject=Mona%20Radio%20Support">monaapps.support@gmail.com</a>
+          <small>Please include your Apple device and its OS version, the Mona Radio version, your <span style="white-space: nowrap">IC-705</span> firmware version, what you were doing, and the exact message the app showed. Never send your radio’s password or your Wi-Fi password.</small>
+        </aside>
+
+        <div class="support-copy">
+          <p>Mona Radio 1.0 works with:</p>
+          <ul class="info-list">
+            <li>Radio: <span style="white-space: nowrap">Icom IC-705</span> (the only supported radio in this version)</li>
+            <li>iPhone and iPad (iOS / iPadOS 17 or later)</li>
+            <li>Mac (macOS 14 or later)</li>
+            <!-- APPLE TV: uncomment only if the physical RC confirms tvOS ships in 1.0.
+            <li>Apple TV Radio Wall (tvOS 17 or later), receive-only</li>
+            -->
+            <li>Connection: the radio and your Apple device on the same local network</li>
+          </ul>
+          <div class="note-box">
+            <p>Mona Radio does not initiate radio transmission. It shows and plays what your radio receives, and changes receive-side settings such as frequency, mode, filter, AF gain and squelch.</p>
+          </div>
+
+          <h2>Before you connect</h2>
+          <ol>
+            <li>On the <span style="white-space: nowrap">IC-705</span>, open <strong>MENU › SET › WLAN Set</strong>, turn WLAN on, and join the same network as your Apple device.</li>
+            <li>In <strong>WLAN Set › Remote Settings</strong>, turn Network Control on and set a Network User name and password. Mona Radio 1.0 needs each to be exactly 16 letters or digits.</li>
+            <li>In <strong>WLAN Set › Connection Settings</strong>, note the radio’s IP address.</li>
+          </ol>
+
+          <h2>Connecting</h2>
+          <p>Open Mona Radio, add a radio, and enter its address and the Network User name and password. Use <strong>Check</strong> to confirm the radio answers, then connect. When asked, allow Local Network access — Mona Radio needs it to reach your radio.</p>
+
+          <h2>Troubleshooting</h2>
+          <div class="faq-list">
+            <details>
+              <summary>“No radio answered at this address”</summary>
+              <div class="faq-answer">
+                <p>The radio is off, asleep, on a different network, or its address has changed. Check the address on the radio, and make sure your Apple device is on the same network — not on cellular data, a VPN that captures local traffic, or a guest network that isolates devices.</p>
+              </div>
+            </details>
+            <details>
+              <summary>“The radio rejected the user name or password”</summary>
+              <div class="faq-answer">
+                <p>Re-enter the radio’s Network User name and password. These are the radio’s own settings, not an account with Mona Apps, and each must be exactly 16 letters or digits.</p>
+              </div>
+            </details>
+            <details>
+              <summary>“The radio is still releasing a previous session”</summary>
+              <div class="faq-answer">
+                <p>The <span style="white-space: nowrap">IC-705</span> holds a session for a short time after a client disconnects abruptly, and it allows one network session at a time. Make sure no other app or computer is connected to the radio, wait a moment, and try again.</p>
+              </div>
+            </details>
+            <details>
+              <summary>“Mona Radio connects to radios on your local network only”</summary>
+              <div class="faq-answer">
+                <p>Mona Radio 1.0 accepts private local-network addresses (for example 192.168.x.x or 10.x.x.x) and local host names only. It cannot reach a radio over the internet.</p>
+              </div>
+            </details>
+            <details>
+              <summary>I declined the Local Network prompt</summary>
+              <div class="faq-answer">
+                <p>Turn Local Network access back on for Mona Radio in your device’s Settings (on iPhone and iPad: <strong>Settings › Privacy &amp; Security › Local Network</strong>; on Mac: <strong>System Settings › Privacy &amp; Security › Local Network</strong>), then try again.</p>
+              </div>
+            </details>
+            <details>
+              <summary>The connection drops or keeps reconnecting</summary>
+              <div class="faq-answer">
+                <p>Mona Radio reconnects on its own after short interruptions. If the link keeps dropping, move the radio closer to your Wi-Fi access point, check that the radio’s Wi-Fi signal is strong, and avoid networks that put devices to sleep aggressively. If it still won’t recover: disconnect in Mona Radio, quit the app, power the radio off and on, and connect again.</p>
+              </div>
+            </details>
+            <details>
+              <summary>No audio, or the spectrum is not moving</summary>
+              <div class="faq-answer">
+                <p>Check your device volume and output route. Mona Radio plays receive audio while it is in the foreground on iPhone and iPad. If the status shows “Connected, Limited” or “Receive Audio Interrupted”, the radio link is up but part of the stream isn’t arriving; wait a moment, or disconnect and reconnect.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Firmware and network notes</summary>
+              <div class="faq-answer">
+                <p>Keep your <span style="white-space: nowrap">IC-705</span> on current Icom firmware. Mona Radio talks to the radio’s built-in wireless LAN directly; a stable Wi-Fi network with no client isolation gives the best results.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Does Mona Radio support other radios?</summary>
+              <div class="faq-answer">
+                <p>Mona Radio 1.0 supports the <span style="white-space: nowrap">Icom IC-705</span> only.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section tinted">
+      <div class="site-shell">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Need the details?</p>
+            <h2>Read how Mona Radio handles privacy.</h2>
+          </div>
+          <a class="button" href="../privacy/">Privacy Policy</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <div class="footer-copy">
+        Mona Radio by Mona Apps
+        <p>Mona Radio support and privacy information.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="mailto:monaapps.support@gmail.com">monaapps.support@gmail.com</a>
+        <a href="../privacy/">Privacy Policy</a>
+        <a href="../../">Mona Apps site home</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

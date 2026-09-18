@@ -10,6 +10,10 @@ advertising, tracking scripts, or external runtime dependencies.
 - `/` — marketing homepage
 - `/support/` — support contact and FAQ
 - `/privacy/` — privacy policy
+- `/desklens-learn/support/`, `/desklens-learn/privacy/` — DeskLens Learn
+- `/mona-radio/`, `/mona-radio/support/`, `/mona-radio/privacy/` — Mona Radio
+  (the Apple TV line on the support page is commented out until tvOS is
+  confirmed for 1.0)
 
 ## Preview locally
 
