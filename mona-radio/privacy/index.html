@@ -28,82 +28,95 @@
       <div class="site-shell">
         <p class="eyebrow">Privacy by design</p>
         <h1>Mona Radio Privacy Policy</h1>
-        <p>This policy explains what Mona Radio stores on your device, how optional problem reports are processed, and the choices you have.</p>
+        <p>This policy explains what Mona Radio stores on your device, what it sends over your local network, and what it never does.</p>
       </div>
     </section>
 
     <section class="content-section">
       <div class="site-shell policy-wrap">
         <div class="policy-intro">
-          <p><strong>Last updated:</strong> October 23, 2026</p>
-          <p><strong>Applies to:</strong> Mona Radio, including version 1.8. Features vary by platform and version.</p>
+          <p><strong>Last updated:</strong> September 18, 2026</p>
+          <p><strong>Applies to:</strong> Mona Radio 1.0, on every Apple platform it is offered on</p>
           <p><strong>Developer:</strong> Mona Apps</p>
-          <p><strong>Privacy and support contact:</strong> <a href="mailto:monaapps.support@gmail.com">monaapps.support@gmail.com</a></p>
+          <p><strong>Contact:</strong> <a href="mailto:monaapps.support@gmail.com">monaapps.support@gmail.com</a></p>
         </div>
 
         <section class="policy-section">
-          <h2>1. Your choices</h2>
-          <p>Mona Radio has no Mona Apps account, advertising, cross-app tracking, or third-party analytics or crash-reporting SDK. Diagnostics 2.0 problem-report uploads are optional and disabled by default. Using the radio does not require enabling them.</p>
-          <p>You can enable automatic reports in Settings › Support › Feedback Center, separately for beta and App Store reporting channels, and turn them off there at any time. You can also review and send a single Feedback Center report without enabling automatic reports. After automatic reporting is enabled, qualifying incidents can be uploaded without a separate prompt for each incident.</p>
+          <h2>1. The short version</h2>
+          <p>Mona Radio does not collect personal data. It has no account, no advertising, no tracking, and no third-party analytics or crash-reporting SDK. Mona Apps does not operate an advertising or tracking service, and Mona Radio does not send your information to us.</p>
+          <p>Radio communication is designed to occur directly between your Apple device and your <span style="white-space: nowrap">Icom IC-705</span> over your own local network.</p>
         </section>
 
         <section class="policy-section">
-          <h2>2. Radio connections, permissions and local information</h2>
-          <p>Mona Radio communicates with the radios and services you configure to provide the features you choose. Radio connections can carry authentication, radio state, spectrum, receive audio and user-initiated control or transmit commands. Radio protocols may not encrypt this traffic; use a network you trust. Diagnostics uses a separate HTTPS connection and does not control the radio.</p>
-          <p>Local app data includes saved radio profiles and connection settings, preferences, an optional callsign, and diagnostic history and report queues. Radio sign-in credentials are held in the device’s Keychain. Depending on the features you use, local content can also include logbook or QSO information, journal entries, saved recordings, and captions or translations. Radio audio is processed for playback and enabled audio features, including Time Shift and recording; it is not included in automatic diagnostic reports.</p>
-          <p>The app requests Local Network access for network radios and microphone or audio-input access for features that need it, such as voice transmission, Listen decoding or USB receive audio on Mac. Availability varies by platform; Apple TV remains receive-only. You can manage permissions in your device settings. When you explicitly export, share, or synchronize content with a service you configure, the selected content goes to that destination under its own privacy practices; this is separate from Diagnostics 2.0.</p>
+          <h2>2. What Mona Radio sends over the network, and where</h2>
+          <p>Mona Radio opens network connections only to the radio address you enter. The app accepts private local-network addresses and local host names, and refuses public internet addresses. It uses those connections to authenticate to the radio, read its state, receive its spectrum data and receive audio, and send the receive-side changes you ask for.</p>
+          <p>Mona Radio does not connect to a Mona Apps server; there is none. It does not browse or scan your network for devices.</p>
+          <p>Traffic between Mona Radio and the <span style="white-space: nowrap">IC-705</span> uses the radio’s own local-network protocol. As with any device on a shared network, use a network you trust.</p>
         </section>
 
         <section class="policy-section">
-          <h2>3. What optional diagnostic reports contain</h2>
-          <p>Reports help diagnose failures and improve app reliability. They can include app version and build, distribution channel, platform, operating-system version, device class and CPU architecture; radio model and transport type; incident kind, trigger, severity, occurrence counts and technical status or error codes; and a bounded recent history of diagnostic events, timing and numeric measurements. Examples include abnormal termination, connection failures, audio stalls or timeouts, transmit-release problems, and technical failures of captions, Live QSO, Time Shift or Interpreter features.</p>
-          <p>Reports also contain a random report identifier, a time rounded to the minute, and redaction metadata. The service adds a receipt time, issue-group information and a hash of a deletion token. A report you compose can include a problem description, feature suggestion, radio-support request or transmit-compatibility observation, and optional recent diagnostics. Your description is redacted and shown for review before you press Send.</p>
+          <h2>3. What Mona Radio stores on your device</h2>
+          <ul>
+            <li>the radios you save: the name you give each radio, its local network address and port numbers, when it last connected, and a short fingerprint derived from the radio’s own identity so the app can recognise the same radio at a new address;</li>
+            <li>your radio’s network user name and password, which Mona Radio needs to sign in to the radio;</li>
+            <li>an optional callsign you may enter to label the spectrum display.</li>
+          </ul>
+          <p>The radio’s network user name and password are stored together in your device’s Keychain, marked as available on this device only and not synchronised to iCloud Keychain or your other devices. They are used only to sign in to your radio. The other items are stored in the app’s own storage on your device.</p>
+          <p>Deleting Mona Radio removes its app data from your device, subject to normal backup and restore behaviour of your device.</p>
         </section>
 
         <section class="policy-section">
-          <h2>4. Content exclusions and redaction</h2>
-          <p>The automatic diagnostic snapshot has no fields for audio or recordings, transcripts or translations, QSO or journal content, callsigns, names, location, credentials, network addresses or network names, contacts, photos or attached files. Content event families are excluded, and radio identity and request-correlation fields are removed from exported events. This does not prevent the app from using radio or user content locally for the features you choose.</p>
-          <p>For a description you write yourself, the app removes recognized addresses, email addresses, web links, identifier patterns, password or token assignments, and registered sensitive profile values before showing the preview. The service checks report structure and prohibited patterns again and rejects reports that fail its checks. Redaction is pattern-based: it cannot recognize every name, callsign or other personal detail you might type. Review the preview and do not include sensitive information or radio/user content in your description.</p>
+          <h2>4. Permissions</h2>
+          <p>Mona Radio asks for <strong>Local Network</strong> access so that it can reach your radio. That is the only permission it requests. If you decline, the app cannot connect to your radio; you can change this later in your device’s Settings.</p>
+          <p>Mona Radio does not request access to your microphone, camera, location, contacts or photos.</p>
         </section>
 
         <section class="policy-section">
-          <h2>5. App Store verification and the derived identifier</h2>
-          <p>Uploads carry Apple’s signed AppTransaction record so our Cloudflare Worker can verify the app’s bundle and App Store environment and limit abuse. The signed record can contain app transaction identifiers, purchase-related dates and device-verification information. The Worker processes the signed record during verification; application database storage does not retain the signed record or the raw Apple identifiers.</p>
-          <p>The Worker derives a keyed, one-way identifier (HMAC) from the app’s bundle, environment and an Apple transaction identity, falling back to a device-verification value when needed. Apple’s appTransactionID is associated with the same Apple Account and app across devices, so this derived value should not be treated as an anonymous or necessarily device-only identifier. It is used for request and issue-creation limits and to derive report-specific deletion tokens, not advertising or cross-app tracking.</p>
-          <p>The derived value appears in hourly and daily abuse-counter keys. Counter rows expire after two hours or two days respectively and are removed by scheduled cleanup. New requests can create new counters containing the same derived value. Stored report payloads do not carry this value, but the service processes it alongside the upload; we do not promise that uploaded information is anonymous.</p>
+          <h2>5. Radio audio</h2>
+          <p>Mona Radio plays the receive audio your radio sends. It does not record or save that audio; it is played and discarded.</p>
         </section>
 
         <section class="policy-section">
-          <h2>6. Service providers, locations and international processing</h2>
-          <p>Mona Apps uses Cloudflare, Inc. to receive HTTPS uploads in a Cloudflare Worker and store accepted reports in a private D1 database. Cloudflare necessarily processes connection information, such as your source IP address, to deliver the service. The Worker does not use IP addresses as abuse-counter keys or write them into report rows.</p>
-          <p>The production D1 database currently runs in Cloudflare’s Western Europe region, with read replication disabled. No D1 jurisdiction restriction is configured. Worker processing uses Cloudflare’s global network; this regional placement is not a guarantee that all processing remains in Europe.</p>
-          <p>Technical issue summaries are sent to a private GitHub repository for developer triage. Summaries include technical categories, build/platform details, evidence codes, event names and aggregate counts; the text you wrote stays in D1 and is not copied into issues. A single-feedback issue includes a group key based on its report ID.</p>
-          <p>Cloudflare and GitHub are US-based service providers with international operations. Processing may take place in the United States and other countries outside your country, including outside the EEA/UK. Their privacy and data-transfer terms describe their processing and available safeguards: <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare Privacy Policy</a>, <a href="https://www.cloudflare.com/cloudflare-customer-dpa/">Cloudflare Data Processing Addendum</a>, and <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Contact us for questions about the processing of your information. We do not sell diagnostic reports or use them for advertising or tracking.</p>
+          <h2>6. Transmission</h2>
+          <p>Mona Radio does not initiate radio transmission. It has no push-to-talk, microphone or transmit-audio function.</p>
         </section>
 
         <section class="policy-section">
-          <h2>7. Retention</h2>
-          <p>The production service is configured to expire individual reports 30 days after receipt. This also applies to TestFlight/Sandbox reports sent to production. The separate staging service uses 14 days. Cleanup is scheduled every six hours; deletion occurs during cleanup rather than at an exact deadline. Single-feedback cleanup is limited to 20 reports per run, and backlogs or service failures can delay removal.</p>
-          <p>Aggregate incident and compatibility groups and their technical GitHub issues can remain after individual reports expire or are deleted; no automatic expiry is configured for these aggregates. For a single-feedback group, the service removes the group and attempts to replace the GitHub issue title/body with a removal notice and close it. This does not guarantee erasure of issue history, comments, provider logs or backups. These providers’ operational retention is separate from the report-row cleanup described here.</p>
-          <p>On the device, unsent reports expire after seven days; completed report receipts are ordinarily removed after 30 days. Failed reports may remain available for retry until queue retention or deletion removes them. These local limits are separate from server retention.</p>
+          <h2>7. Diagnostics</h2>
+          <p>Like most apps, Mona Radio writes technical log messages to your device’s system log. These record connection stages and error codes; they are not uploaded by the app and the app offers no way to export them.</p>
+          <p>If you have chosen in your device’s settings to share analytics with app developers, Apple may provide Mona Apps with crash reports and aggregate diagnostics under Apple’s own terms and privacy practices. That sharing is controlled by you and by Apple, not by Mona Radio.</p>
         </section>
 
         <section class="policy-section">
-          <h2>8. Withdraw consent or delete reports</h2>
-          <p>Turn automatic reporting off in Feedback Center to stop future automatic uploads. The app removes local automatic reports and queues deletion requests for previously acknowledged automatic reports using their report-specific deletion tokens. Reports you composed yourself remain separately listed. Delete All Reports removes those local reports as well and queues server deletion for delivered reports whose receipts/tokens the app holds.</p>
-          <p>Server deletion requires network connectivity and an available service. Requests can remain pending and be retried; switching the setting off does not prove that remote deletion has already completed. Deleting the app does not itself guarantee deletion of reports already sent and may remove the local receipts needed to request deletion. Server retention still applies. If you need help, contact us using the address below; never email a password, signed AppTransaction or deletion token.</p>
+          <h2>8. Apple services</h2>
+          <p>Downloading, updating and running Mona Radio involves Apple services such as the App Store, which operate independently of the app under Apple’s terms and privacy policy.</p>
         </section>
 
         <section class="policy-section">
-          <h2>9. Apple services and purchases</h2>
-          <p>Downloading, updating, app verification and any in-app purchases use Apple services under Apple’s terms and privacy practices. If you enable Apple’s sharing of developer analytics, Apple may provide crash reports and aggregate diagnostics separately from the app’s Feedback Center setting. Apple controls that sharing. StoreKit purchase verification and optional diagnostic attestation serve different purposes.</p>
+          <h2>9. What Mona Radio does not include</h2>
+          <ul>
+            <li>no account, sign-in or registration with Mona Apps;</li>
+            <li>no advertising or advertising identifier;</li>
+            <li>no tracking or cross-app tracking;</li>
+            <li>no third-party analytics or crash-reporting SDK;</li>
+            <li>no Mona Apps server or cloud service;</li>
+            <li>no in-app purchase in this version.</li>
+          </ul>
         </section>
 
         <section class="policy-section">
-          <h2>10. Support and privacy requests</h2>
-          <p>If you email us, we receive your email address and the information you include to handle your request. For privacy questions, requests for access, correction or deletion, or help withdrawing consent, contact <a href="mailto:monaapps.support@gmail.com">monaapps.support@gmail.com</a> with the subject “Mona Radio privacy request”. You may also use the published support address, <a href="mailto:support@monaradio.com">support@monaradio.com</a>.</p>
-          <p>Describe your request and, if available, provide the report ID or approximate submission date and app build. We may need information to locate a report and verify that you are entitled to request action. Because reports do not contain a contact account, we may be unable to locate one from your email address alone. Depending on your location, you may also have rights to restrict or object to processing, obtain portability, or complain to your local data-protection authority.</p>
-          <p>Mona Radio is intended for amateur-radio operators. Please do not submit children’s personal information or other people’s private information in feedback. We will update this page and its date when our practices change.</p>
+          <h2>10. Children</h2>
+          <p>Mona Radio is a tool for amateur-radio operators. It does not collect personal information from anyone, including children.</p>
+        </section>
+
+        <section class="policy-section">
+          <h2>11. Contacting support and policy changes</h2>
+          <p>If you email us, Mona Apps receives the information you choose to include so that we can respond. Please do not send your radio’s password or your Wi-Fi password.</p>
+          <p>If a future version changes how information is handled, this page will be updated and the date above will change.</p>
+          <div class="policy-contact">
+            <p><strong>Mona Apps</strong></p>
+            <p><a href="mailto:monaapps.support@gmail.com">monaapps.support@gmail.com</a></p>
+          </div>
         </section>
       </div>
     </section>
